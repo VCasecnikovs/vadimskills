@@ -1,6 +1,6 @@
 # Claude Code macOS Bridge Skills
 
-Four skills that fix Claude Code's terminal limitations by bridging to native macOS apps.
+Skills that fix Claude Code's terminal limitations by bridging to native macOS apps.
 
 ## The Problem
 
@@ -24,6 +24,9 @@ Renders output as a styled HTML page and opens in the browser. When Claude Code 
 ### /finder
 Opens Finder at the location where Claude Code saved a file. Paths flash by in the output and disappear. This gets you right there.
 
+### /web
+Proactively opens relevant web pages after actions that have a web counterpart. Push to GitHub? It opens the repo. Create a PR? It opens the PR. Deploy? It opens the site. Also works manually with `/web`.
+
 ## Installation
 
 Copy any skill folder into your Claude Code skills directory:
@@ -33,6 +36,7 @@ cp -r typora/ ~/.claude/skills/typora/
 cp -r copy/ ~/.claude/skills/copy/
 cp -r html-view/ ~/.claude/skills/html-view/
 cp -r finder/ ~/.claude/skills/finder/
+cp -r web/ ~/.claude/skills/web/
 ```
 
 Each skill is a single `SKILL.md` file - plain text instructions, no code.
@@ -44,6 +48,7 @@ In Claude Code, just type:
 - `/copy` - copy last relevant output to clipboard
 - `/html-view` - render output as HTML page
 - `/finder` - open Finder at relevant location
+- `/web` - open relevant web page (also triggers proactively)
 
 ## Requirements
 
